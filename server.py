@@ -1,7 +1,7 @@
 import redis
 
 # Configuración de Redis
-redis_client = redis.Redis(host='localhost', port=6379, decode_responses=True)
+redis_client = redis.Redis(host='https://distribuidos-server.onrender.com', port=6379, decode_responses=True)
 pubsub = redis_client.pubsub()
 pubsub.subscribe("acciones_jugadores")  # Escuchar acciones de los jugadores
 
